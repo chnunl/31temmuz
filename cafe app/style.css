@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-2);
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+width: 10px;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #060413;
+    cursor: pointer;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background-color: var(--second-color);
+}
+
+/* variables.................................. */
+:root{
+    --main-color: #54372a;
+    --second-color: #df582e;
+    --tex-color: #060413;
+    --container-color: #e8d8cd;
+    --bg-color: #fff8f7;
+    --text-alter-color: #94908e;
+    --poppins-font:"Poppins", sans-serif;
+    --font-family-2:"Playfair Display", serif;
+}
+
+body{
+    font-variant: var(--bg-color);
+    color: var(--tex-color);
+}
+
+.container{
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display:
+}    
+
+.nav{
+    background-color: var(--tex-color);
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 32px;
+}
+
+.logo{
+    color: var(--container-color);
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.nav-link{
+    color: var(--text-alter-color);
+    font-size: 14px;
+    font-family: var(--poppins-font);
+}
+
+.nav-link:hover{
+    color: var(--bg-color);
+}
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.nav-icons .bx{
+    color: var(--bg-color);
+    font-size: 20px;
+}
+
+#menu-icon{
+    display: none;
+}
+
+/* home...................................... */
+.home{
+min-height: 650px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+align-items: center;
+gap: 24px;
+}
+
+.home-img{
+width: 100%;
+max-width: 560px;
+}
+
+.home-text{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.home-text p{
+    max-width: 300px;
+    font-size: 10px;
+    font-family: var(--poppins-font);
+    margin: 16px 0 24px;
+}
+
+.btn{
+    background-color: var(--tex-color);
+    max-width: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border-radius: 16px;
+}
+
+.btn span{
+    color: var(--bg-color);
+    text-transform: uppercase;
+    font-family: var(--poppins-font);
+}
+
+.btn .bx{
+    color: var(--bg-color);
+    font-size: 20px;
+    background-color: var(--second-color);
+    padding: 5px;
+    border-radius: 50%;
+    transform: rotate(-40deg);
+
+}
+
+/* servis alanı........................... */
+.heading{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.heading h2{
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.services-content{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(auto,160px));
+gap: 16px;
+justify-content: space-between;
+}
+
+.ser-box{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    padding: 35px 20px;
+    border-radius: 32px;
+}
+
+.ser-box img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.ser-box p{
+    color: var(--container-color);
+}
+
+/* products.............................. */
+.products .heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.heading p{
+    max-width: 550px;
+    width: 100%;
+    font-size: 15px;
+    font-family: var(--poppins-font);
+}
+
+.product-content{
+    background-color: var(--container-color);
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    padding: 40px 60px;
+    border-radius: 24px;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.product-box{
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.product-box .heart-icon{
+position: absolute;
+left: 20px;
+top: 20px;
+background: #fff;
+padding: 8px;
+border-radius: 50%;
+color: var(--second-color);
+}
+
+.product-box img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.product-box p{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--poppins-font);
+    border: 1px solid var(--text-alter-color);
+    padding: 2px 7px;
+    border-radius: 16px;
+    margin: 16px 0 8px;
+}
+
+.product-box h2{
+    color: var(--main-color);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.product-info span{
+    color: var(--main-color);
+    font-family: 500;
+}
+
+.product-info .bx{
+    background-color: var(--second-color);
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--bg-color);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.product-info .bx:hover{
+    background-color: var(--main-color);
+}
+
+/* team......................................... */
+.team-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 24px;
+}
+
+.team-box img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-box h2{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--poppins-font);
+    margin-top: 16px;
+}
+
+.team-box span{
+    font-size: 10px;
+    font-family: var(--poppins-font);
+    color: var(--text-alter-color);
+}
+
+.team-box p{
+    font-size: 13px;
+    font-family: var(--poppins-font);
+    margin-top: 10px;
+}
+
+/* review......................................... */
+.review{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+}
+
+.review-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--container-color);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.review-box img{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+object-fit: cover;
+object-position: center;
+box-shadow: 0 4px 12px black;
+border: 7px solid #fff;
+}
+
+.review-box h2{
+    font-size: 16px;
+    color: var(--main-color);
+    font-family: var(--poppins-font);
+    font-weight: 500;
+    margin:  16px 0;
+}
+
+.review-box span{
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.review-box p{
+    font-family: var(--poppins-font);
+    font-size: 12px;
+    margin-top: 16px;
+    letter-spacing: 1.5px;
+    max-width: 350px;
+}
+
+/* book....................................... */
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 28px;
+    position: relative;
+}
+
+.book-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.book-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.book-data{
+    margin-top: 64px;
+}
+
+.book-data h2{
+    color: var(--bg-color);
+    font-size: 32px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.book-data form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-color);
+    padding: 2px 10px;
+    margin: 16px 0;
+    border-radius: 32px;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.input-box .bx{
+    color: var(--tex-color);
+}
+
+.input-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+}
+
+.book-btn{
+    white-space: nowrap;
+    padding: 10px 14px;
+    border-radius: 40px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 13px;
+}
+
+.book-btn:hover{
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+.book-data p{
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* footer.................................... */
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin-top: 48px !important;
+    padding: 40px 0 35px;
+}
+footer .logo{
+    color: var(--main-color);
+}
+.social{
+    display: flex;
+    margin-top: 16px;
+    gap: 16px;
+    align-items: center;
+}
+.social a{
+    color: var(--main-color);
+    font-size: 24px;
+}
+.social a:hover{
+    color: var(--second-color);
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-box h3{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.footer-box a{
+    color: var(--main-color);
+}
+.copyright{
+    padding: 30PX;
+    text-align: center;
+    color: var(--main-color);
+}
+
+
+
+
+
+/* responzive................................ */
+@media (max-width: 1080px){
+    .container{
+        width: 90%;
+    }
+    .product-content{
+        padding: 40px;
+    }
+}
+@media (max-width: 875px){
+    .review{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #menu-icon{
+        display: block;
+    }
+}
+@media (max-width: 770px){
+    .home{
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top: 85px;
+    }
+    .home-text{
+        order: 1;
+    }
+    .heading h2{
+        font-size: 26px;
+    }
+    .product-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .review{
+        grid-template-columns: 1fr;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .book{
+        padding: 20px;
+    }
+    .book-data{
+        margin-top: 48px;
+        max-width: 350px;
+        width: 100%;
+    }
+    .book-data form{
+        display: grid;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .footer{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+@media (max-width: 700px){
+    .header{
+        top: 20;
+    }
+    .nav{
+        padding: 14px 20px;
+    }
+    .logo{
+        font-size: 20;
+    }
+    .navbar{
+        display: none;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .home-text{
+        margin-left: 20px;
+    }
+}
+@media (max-width: 500px){
+    .services-content{
+        justify-content: center;
+    }
+    .product-content{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        gap: 15px;
+    }
+}
+@media (max-width: 380px){
+    
+}
+@media (max-width: 1080px){
+    
+}

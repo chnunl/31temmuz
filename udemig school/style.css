@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: "Poppins", sans-serif; */
+/* font-family: "Roboto", sans-serif; */
+/* Css sıfırlama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ /* css ortak yapılar */
+  body{
+    font-family: "Poppins", sans-serif;};
+h1{
+  font-family: "Roboto", sans-serif;
+}
+.align-box{
+width: 80%;
+margin: auto;
+text-align: center;
+padding: 100px;
+}
+
+.align-col{
+  flex-basis: 30%;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* header scc */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(5, 10, 30, 0.7), rgba(5, 10, 30, 0.7)),
+    url(./udemig-school/bg.webp);
+  background-size: cover;
+  background-position: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 6%;
+}
+.nav a img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+.nav-links ul li a::after {
+  content: "";
+  background-color: red;
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 4px;
+}
+.nav-links ul li a:hover::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.menu {
+  display: none;
+  color: white;
+  font-size: 30px;
+}
+/* text-box kısmı */
+
+.text-box{
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.text-box h1{
+  font-size: 60px;
+}
+.text-box p{
+margin: 10px 0;
+font-size: 15px;
+}
+.hero-btn{
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 5px; 
+  transition: 0.3s;
+}
+.hero-btn:hover{
+  background-color: red;
+  border-color: red;
+}
+
+
+/* kurs alanı */
+
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.course-col{
+  background-color: antiquewhite;
+  padding: 20px 10px;
+  transition: all 0.3s;
+}
+.course-col:hover{
+  box-shadow: 0 0 10px gray; 
+}
+
+/* kampüs alanı */
+
+.campus-col{
+  position: relative;
+  overflow: hidden;
+  background-color: aqua;
+  }
+  .campus-col img{
+    width: 100%;
+    display: block;
+  }
+  .layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+}
+.layer:hover{
+  background-color: rgba(200, 52 , 15, 0.5);
+}
+.layer h3{
+  font-weight: 500;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+.layer:hover h3{
+  bottom: 50%;
+  opacity: 1;
+}
+
+/* fakulte alanı */
+
+.fakülte-col{
+  text-align: left;
+}
+.fakülte-col img{
+  width: 100%;
+}
+
+/* yorumlar alanı */
+.testemonials-col{
+  background-color: antiquewhite;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.testemonials-col img{
+  height: 50px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+.testemonials-col div p{
+  padding: 0;
+}
+.testemonials-col h3{
+  margin-top: 15px;
+}
+.testemonials-col div .bi{
+  color: red;
+}
+
+/* kontak alanı */
+.ua{
+  background: linear-gradient(rgba(5,10,30,0.7), rgba(5,10,30,0.7)), url(./udemig-school/london.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0;
+  color: white;
+  margin: 50px auto;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.ua h1{
+  margin-bottom: 40px;
+  padding: 0;
+}
+/* footer alanı */
+.footer{
+  padding: 30px 0;
+}
+.footer h1{
+  margin-bottom: 25px;
+}
+.icons{
+  margin: 10px;
+}
+.icons .bi{
+  color: red;
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 20px 10px;
+}
+
+/* responsive tasarım */
+@media (max-width: 768px)
+{
+  .nav-links{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+  .row{
+    display: block;
+  }
+  .text-box{
+    font-size: 10px;
+  }
+}
